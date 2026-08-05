@@ -2,8 +2,8 @@
 <html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="markdown-editor-project-seed" content="project-msemrwl4-eca4xqbn">
-  <title>可编辑的 Markdown 文档 - Markdown 文档编辑器</title>
+  <meta name="markdown-editor-project-seed" content="project-msdzcxh0-ywrwg5nb">
+  <title>Markdown 编辑器</title>
 
   <!-- Markdown 渲染器 -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -1804,46 +1804,26 @@
         display: none !important;
       }
     }
+
+    #preview .protected-math-block,
+    .protected-math-block {
+      margin: 1.35em 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      overflow-x: auto;
+      overflow-y: hidden;
+      text-align: center;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    #preview .protected-math-block mjx-container,
+    .protected-math-block mjx-container {
+      margin: 0 !important;
+    }
 </style>
 <style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
-.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
-.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
-.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
-</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
-.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
-.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
-.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
-.CtxtMenu_MenuClose:hover:focus {  outline:none}
-</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
-.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
-.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
-.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
-.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
-.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
-.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
-.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
-.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
-.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
-.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
-.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
-.CtxtMenu_MenuSlider {  left: .1em;}
-.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
-.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
-.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
-.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
-.CtxtMenu_MenuDisabled {  color:GrayText}
-.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
-.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
-.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
-.CtxtMenu_ContextMenu:focus {  outline:none}
-.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
-.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
-.CtxtMenu_SelectionItem {  padding-right: 1em;}
-.CtxtMenu_Selection {  right: 40%; width:50%; }
-.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
-.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
-.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
-</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
 .CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
 .CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
 .CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
@@ -1887,32 +1867,76 @@
   <div class="app">
     <div class="toolbar" id="mainToolbar">
       <div class="toolbar-row toolbar-row-primary">
-        <details class="file-menu toolbar-menu" id="fileMenu" data-menu-align="start">
-          <summary class="toolbar-icon-button" aria-label="文件菜单" title="文件菜单（Ctrl + N 新建；Ctrl + O 打开）">
+        <details
+          class="file-menu toolbar-menu"
+          id="fileMenu"
+          data-menu-align="start"
+        >
+          <summary
+            class="toolbar-icon-button"
+            aria-label="文件菜单"
+            title="文件菜单（Ctrl + N 新建；Ctrl + O 打开）"
+          >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </summary>
-          <div class="toolbar-menu-panel file-menu-panel" role="menu" style="top: 40px; left: 6px; right: auto;">
-            <button type="button" role="menuitem" title="新建文档（Ctrl + N）" onclick="newMarkdownDocument()">新建文档　Ctrl + N</button>
-            <button type="button" role="menuitem" title="打开 Markdown（Ctrl + O）" onclick="openMarkdownPicker()">打开 Markdown　Ctrl + O</button>
+          <div class="toolbar-menu-panel file-menu-panel" role="menu">
+            <button
+              type="button"
+              role="menuitem"
+              title="新建文档（Ctrl + N）"
+              onclick="newMarkdownDocument()"
+            >新建文档　Ctrl + N</button>
+            <button
+              type="button"
+              role="menuitem"
+              title="打开 Markdown（Ctrl + O）"
+              onclick="openMarkdownPicker()"
+            >打开 Markdown　Ctrl + O</button>
           </div>
         </details>
 
-        <button class="toolbar-text-button" id="realtimeButton" onclick="toggleRealtimeRender()" title="实时渲染开关（Ctrl + Alt + R）">实时渲染：开</button>
-        <button class="toolbar-text-button" id="syncScrollButton" onclick="toggleSyncScroll()" title="同步滚动开关（Ctrl + Alt + S）">同步滚动：开</button>
+        <button
+          class="toolbar-text-button"
+          id="realtimeButton"
+          onclick="toggleRealtimeRender()"
+          title="实时渲染开关（Ctrl + Alt + R）"
+        >实时渲染：开</button>
+        <button
+          class="toolbar-text-button"
+          id="syncScrollButton"
+          onclick="toggleSyncScroll()"
+          title="同步滚动开关（Ctrl + Alt + S）"
+        >同步滚动：开</button>
 
-        <button class="toolbar-text-button" id="rightEditButton" onclick="toggleRightEditing()" title="右侧可视化编辑开关（Ctrl + Alt + W）" aria-pressed="false">右侧编辑：关</button>
+        <button
+          class="toolbar-text-button"
+          id="rightEditButton"
+          onclick="toggleRightEditing()"
+          title="右侧可视化编辑开关（Ctrl + Alt + W）"
+          aria-pressed="false"
+        >右侧编辑：关</button>
 
         <span class="toolbar-separator" aria-hidden="true"></span>
 
-        <button class="toolbar-icon-button" onclick="undoEdit()" aria-label="撤销" title="撤销（Ctrl + Z）">
+        <button
+          class="toolbar-icon-button"
+          onclick="undoEdit()"
+          aria-label="撤销"
+          title="撤销（Ctrl + Z）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M9 7H5V3"></path>
             <path d="M5.2 7.1A8 8 0 1 1 7 18.4"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button" onclick="redoEdit()" aria-label="反撤销" title="反撤销（Ctrl + Shift + Z）">
+        <button
+          class="toolbar-icon-button"
+          onclick="redoEdit()"
+          aria-label="反撤销"
+          title="反撤销（Ctrl + Shift + Z）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M15 7h4V3"></path>
             <path d="M18.8 7.1A8 8 0 1 0 17 18.4"></path>
@@ -1921,13 +1945,28 @@
 
         <span class="toolbar-separator" aria-hidden="true"></span>
 
-        <button class="toolbar-text-button formatting-toolbar-toggle" id="formattingToolbarToggle" type="button" aria-expanded="false" title="展开或收起文本编辑工具栏（Ctrl + Alt + F）" onclick="toggleFormattingToolbar()">
+        <button
+          class="toolbar-text-button formatting-toolbar-toggle"
+          id="formattingToolbarToggle"
+          type="button"
+          aria-expanded="false"
+          title="展开或收起文本编辑工具栏（Ctrl + Alt + F）"
+          onclick="toggleFormattingToolbar()"
+        >
           <span>文本编辑</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="m7 9 5 5 5-5"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button formatting-toolbar-pin" id="formattingToolbarPin" type="button" aria-pressed="false" aria-label="固定文本编辑工具栏" title="固定文本编辑工具栏（Ctrl + Alt + G）" onclick="toggleFormattingToolbarPin()">
+        <button
+          class="toolbar-icon-button formatting-toolbar-pin"
+          id="formattingToolbarPin"
+          type="button"
+          aria-pressed="false"
+          aria-label="固定文本编辑工具栏"
+          title="固定文本编辑工具栏（Ctrl + Alt + G）"
+          onclick="toggleFormattingToolbarPin()"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="m14 4 6 6-3 1-4 4v4l-2 2-2-6-6-2 2-2h4l4-4z"></path>
           </svg>
@@ -1935,17 +1974,56 @@
 
         <span class="toolbar-separator" aria-hidden="true"></span>
 
-        <button class="toolbar-text-button" onclick="saveVersion()" title="保存稳定版本（Ctrl + S）">保存</button>
-        <button class="toolbar-text-button" onclick="restoreSavedVersion()" title="恢复稳定版本（Ctrl + Shift + R）">恢复版本</button>
-        <button class="toolbar-text-button" onclick="clearCurrentProjectData()" title="清空当前项目（Ctrl + Alt + Backspace）">清空</button>
-        <button class="toolbar-text-button" onclick="writeCurrentProjectIntoSource()" title="将当前项目写入新的 HTML 源码（Ctrl + Shift + S）">写入源码</button>
+        <button
+          class="toolbar-text-button"
+          onclick="saveVersion()"
+          title="保存稳定版本（Ctrl + S）"
+        >保存</button>
+        <button
+          class="toolbar-text-button"
+          onclick="restoreSavedVersion()"
+          title="恢复稳定版本（Ctrl + Shift + R）"
+        >恢复版本</button>
+        <button
+          class="toolbar-text-button"
+          onclick="clearCurrentProjectData()"
+          title="清空当前项目（Ctrl + Alt + Backspace）"
+        >清空</button>
+        <button
+          class="toolbar-text-button"
+          onclick="writeCurrentProjectIntoSource()"
+          title="将当前项目写入新的 HTML 源码（Ctrl + Shift + S）"
+        >写入源码</button>
 
-        <details class="export-menu toolbar-menu" id="exportMenu" data-menu-align="end">
-          <summary class="toolbar-text-button export-summary" aria-label="打开导出菜单" title="导出菜单（Ctrl + Alt + E）">导出</summary>
+        <details
+          class="export-menu toolbar-menu"
+          id="exportMenu"
+          data-menu-align="end"
+        >
+          <summary
+            class="toolbar-text-button export-summary"
+            aria-label="打开导出菜单"
+            title="导出菜单（Ctrl + Alt + E）"
+          >导出</summary>
           <div class="toolbar-menu-panel export-menu-panel" role="menu">
-            <button type="button" role="menuitem" title="导出 Markdown（Ctrl + Alt + Shift + M）" onclick="downloadMarkdown(); closeToolbarMenus()">Markdown　Ctrl + Alt + Shift + M</button>
-            <button type="button" role="menuitem" title="导出 HTML（Ctrl + Alt + Shift + H）" onclick="downloadRenderedHTML(); closeToolbarMenus()">HTML　Ctrl + Alt + Shift + H</button>
-            <button type="button" role="menuitem" title="打印或导出 PDF（Ctrl + P）" onclick="printDocumentWithPageNumbers(); closeToolbarMenus()">PDF　Ctrl + P</button>
+            <button
+              type="button"
+              role="menuitem"
+              title="导出 Markdown（Ctrl + Alt + Shift + M）"
+              onclick="downloadMarkdown(); closeToolbarMenus()"
+            >Markdown　Ctrl + Alt + Shift + M</button>
+            <button
+              type="button"
+              role="menuitem"
+              title="导出 HTML（Ctrl + Alt + Shift + H）"
+              onclick="downloadRenderedHTML(); closeToolbarMenus()"
+            >HTML　Ctrl + Alt + Shift + H</button>
+            <button
+              type="button"
+              role="menuitem"
+              title="打印或导出 PDF（Ctrl + P）"
+              onclick="printDocumentWithPageNumbers(); closeToolbarMenus()"
+            >PDF　Ctrl + P</button>
           </div>
         </details>
 
@@ -1954,16 +2032,45 @@
         <span class="status" id="status">准备就绪</span>
       </div>
 
-      <div class="formatting-toolbar-shell is-collapsed" id="formattingToolbarShell">
+      <div
+        class="formatting-toolbar-shell is-collapsed"
+        id="formattingToolbarShell"
+      >
         <div class="toolbar-row toolbar-row-formatting" id="formattingToolbarRow">
-        <button class="toolbar-icon-button format-action" onclick="toggleInlineFormat('**', '**', '加粗文字')" aria-label="加粗" title="加粗（Ctrl + B）"><strong>B</strong></button>
-        <button class="toolbar-icon-button format-action" onclick="toggleInlineFormat('*', '*', '斜体文字')" aria-label="斜体" title="斜体（Ctrl + I）"><em>I</em></button>
-        <button class="toolbar-icon-button format-action" onclick="toggleInlineFormat('~~', '~~', '删除线文字')" aria-label="删除线" title="删除线（Ctrl + Shift + X）"><span class="strike-icon">S</span></button>
-        <button class="toolbar-icon-button format-action" onclick="toggleInlineFormat('&lt;u&gt;', '&lt;/u&gt;', '下划线文字')" aria-label="下划线" title="下划线（Ctrl + U）"><span class="underline-icon">U</span></button>
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="toggleInlineFormat('**', '**', '加粗文字')"
+          aria-label="加粗"
+          title="加粗（Ctrl + B）"
+        ><strong>B</strong></button>
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="toggleInlineFormat('*', '*', '斜体文字')"
+          aria-label="斜体"
+          title="斜体（Ctrl + I）"
+        ><em>I</em></button>
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="toggleInlineFormat('~~', '~~', '删除线文字')"
+          aria-label="删除线"
+          title="删除线（Ctrl + Shift + X）"
+        ><span class="strike-icon">S</span></button>
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="toggleInlineFormat('<u>', '</u>', '下划线文字')"
+          aria-label="下划线"
+          title="下划线（Ctrl + U）"
+        ><span class="underline-icon">U</span></button>
 
         <span class="toolbar-separator" aria-hidden="true"></span>
 
-        <select class="toolbar-select compact-icon-select heading-icon-select" id="headingFormatSelect" title="标题级别（Ctrl + Alt + 0～6）" aria-label="标题级别" onchange="applyHeadingLevel(this.value); this.selectedIndex = 0">
+        <select
+          class="toolbar-select compact-icon-select heading-icon-select"
+          id="headingFormatSelect"
+          title="标题级别（Ctrl + Alt + 0～6）"
+          aria-label="标题级别"
+          onchange="applyHeadingLevel(this.value); this.selectedIndex = 0"
+        >
           <option value="">H</option>
           <option value="0">正文</option>
           <option value="1">H1</option>
@@ -1974,7 +2081,13 @@
           <option value="6">H6</option>
         </select>
 
-        <select class="toolbar-select compact-size-select" id="fontSizeSelect" title="设置具体字号（Ctrl + Shift + . 增大；Ctrl + Shift + , 减小）" aria-label="字号" onchange="applyFontSize(this.value); this.selectedIndex = 0">
+        <select
+          class="toolbar-select compact-size-select"
+          id="fontSizeSelect"
+          title="设置具体字号（Ctrl + Shift + . 增大；Ctrl + Shift + , 减小）"
+          aria-label="字号"
+          onchange="applyFontSize(this.value); this.selectedIndex = 0"
+        >
           <option value="">字号</option>
           <option value="10px">10</option>
           <option value="12px">12</option>
@@ -1990,51 +2103,142 @@
           <option value="64px">64</option>
         </select>
 
-        <button class="toolbar-icon-button format-action font-step-button" onclick="adjustSelectedFontSize(1)" aria-label="增大字号" title="增大所选文字字号（Ctrl + Shift + .）"><span>T<sup>+</sup></span></button>
-        <button class="toolbar-icon-button format-action font-step-button" onclick="adjustSelectedFontSize(-1)" aria-label="减小字号" title="减小所选文字字号（Ctrl + Shift + ,）"><span>T<sup>−</sup></span></button>
+        <button
+          class="toolbar-icon-button format-action font-step-button"
+          onclick="adjustSelectedFontSize(1)"
+          aria-label="增大字号"
+          title="增大所选文字字号（Ctrl + Shift + .）"
+        ><span>T<sup>+</sup></span></button>
+        <button
+          class="toolbar-icon-button format-action font-step-button"
+          onclick="adjustSelectedFontSize(-1)"
+          aria-label="减小字号"
+          title="减小所选文字字号（Ctrl + Shift + ,）"
+        ><span>T<sup>−</sup></span></button>
 
-        <label class="toolbar-color-control" title="文字颜色（Ctrl + Alt + C）" aria-label="文字颜色">
+        <label
+          class="toolbar-color-control"
+          title="文字颜色（Ctrl + Alt + C）"
+          aria-label="文字颜色"
+        >
           <span class="color-letter color-letter-foreground">A</span>
-          <input id="textColorInput" type="color" value="#c62828" aria-label="选择文字颜色" onchange="applyTextColor(this.value)">
+          <input
+            id="textColorInput"
+            type="color"
+            value="#c62828"
+            aria-label="选择文字颜色"
+            onchange="applyTextColor(this.value)"
+          >
         </label>
-        <label class="toolbar-color-control" title="背景颜色（Ctrl + Alt + H）" aria-label="背景颜色">
+        <label
+          class="toolbar-color-control"
+          title="背景颜色（Ctrl + Alt + H）"
+          aria-label="背景颜色"
+        >
           <span class="color-letter color-letter-background">A</span>
-          <input id="backgroundColorInput" type="color" value="#fff59d" aria-label="选择背景颜色" onchange="applyBackgroundColor(this.value)">
+          <input
+            id="backgroundColorInput"
+            type="color"
+            value="#fff59d"
+            aria-label="选择背景颜色"
+            onchange="applyBackgroundColor(this.value)"
+          >
         </label>
 
         <span class="toolbar-separator" aria-hidden="true"></span>
 
         <div class="toolbar-split-button" aria-label="插入公式">
-          <button class="toolbar-icon-button format-action equation-main-button" onclick="insertEquationTemplate('plain')" aria-label="插入普通公式" title="插入普通行间公式（Alt + =）">
+          <button
+            class="toolbar-icon-button format-action equation-main-button"
+            onclick="insertEquationTemplate('plain')"
+            aria-label="插入普通公式"
+            title="插入普通行间公式（Alt + =）"
+          >
             <span class="equation-symbol">∑</span>
           </button>
-          <details class="toolbar-menu split-menu" id="equationInsertMenu" data-menu-align="start">
-            <summary class="toolbar-icon-button split-menu-summary" aria-label="选择公式类型" title="选择公式类型（Alt + = 普通；Alt + Shift + = 无编号；Ctrl + Alt + = 自定义编号）">
+          <details
+            class="toolbar-menu split-menu"
+            id="equationInsertMenu"
+            data-menu-align="start"
+          >
+            <summary
+              class="toolbar-icon-button split-menu-summary"
+              aria-label="选择公式类型"
+              title="选择公式类型（Alt + = 普通；Alt + Shift + = 无编号；Ctrl + Alt + = 自定义编号）"
+            >
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="m7 9 5 5 5-5"></path>
               </svg>
             </summary>
             <div class="toolbar-menu-panel equation-menu-panel" role="menu">
-              <button type="button" role="menuitem" title="普通公式（Alt + =）" onclick="insertEquationTemplate('plain'); closeToolbarMenus()">普通公式　Alt + =</button>
-              <button type="button" role="menuitem" title="无编号公式（Alt + Shift + =）" onclick="insertEquationTemplate('no-number'); closeToolbarMenus()">无编号公式　Alt + Shift + =</button>
-              <button type="button" role="menuitem" title="自定义编号公式（Ctrl + Alt + =）" onclick="insertCustomNumberedEquation(); closeToolbarMenus()">自定义编号公式　Ctrl + Alt + =</button>
+              <button
+                type="button"
+                role="menuitem"
+                title="普通公式（Alt + =）"
+                onclick="insertEquationTemplate('plain'); closeToolbarMenus()"
+              >普通公式　Alt + =</button>
+              <button
+                type="button"
+                role="menuitem"
+                title="无编号公式（Alt + Shift + =）"
+                onclick="insertEquationTemplate('no-number'); closeToolbarMenus()"
+              >无编号公式　Alt + Shift + =</button>
+              <button
+                type="button"
+                role="menuitem"
+                title="自定义编号公式（Ctrl + Alt + =）"
+                onclick="insertCustomNumberedEquation(); closeToolbarMenus()"
+              >自定义编号公式　Ctrl + Alt + =</button>
             </div>
           </details>
         </div>
 
-        <details class="toolbar-menu" id="equationNumberingMenu" data-menu-align="start">
-          <summary class="toolbar-icon-button equation-numbering-button" id="equationNumberingButton" aria-label="公式编号模式" title="公式编号：按章节 x.x（Ctrl + Alt + N 循环切换）" data-mode="chapter">
+        <details
+          class="toolbar-menu"
+          id="equationNumberingMenu"
+          data-menu-align="start"
+        >
+          <summary
+            class="toolbar-icon-button equation-numbering-button"
+            id="equationNumberingButton"
+            aria-label="公式编号模式"
+            title="公式编号：按章节 x.x（Ctrl + Alt + N 循环切换）"
+          >
             <span class="equation-numbering-icon">№</span>
-            <span class="toolbar-icon-badge" id="equationNumberingBadge" aria-hidden="true">x.x</span>
+            <span
+              class="toolbar-icon-badge"
+              id="equationNumberingBadge"
+              aria-hidden="true"
+            >x.x</span>
           </summary>
           <div class="toolbar-menu-panel equation-numbering-panel" role="menu">
-            <button type="button" role="menuitem" title="不显示公式编号" onclick="setEquationNumberingMode('none'); closeToolbarMenus()">不显示</button>
-            <button type="button" role="menuitem" title="按照正文章节编号，例如 1.1、1.2、2.1" onclick="setEquationNumberingMode('chapter'); closeToolbarMenus()">以章节编号 x.x</button>
-            <button type="button" role="menuitem" title="按照全文顺序连续编号，例如 1、2、3" onclick="setEquationNumberingMode('sequence'); closeToolbarMenus()">以顺序编号</button>
+            <button
+              type="button"
+              role="menuitem"
+              title="不显示公式编号"
+              onclick="setEquationNumberingMode('none'); closeToolbarMenus()"
+            >不显示</button>
+            <button
+              type="button"
+              role="menuitem"
+              title="按照正文章节编号，例如 1.1、1.2、2.1"
+              onclick="setEquationNumberingMode('chapter'); closeToolbarMenus()"
+            >以章节编号 x.x</button>
+            <button
+              type="button"
+              role="menuitem"
+              title="按照全文顺序连续编号，例如 1、2、3"
+              onclick="setEquationNumberingMode('sequence'); closeToolbarMenus()"
+            >以顺序编号</button>
           </div>
         </details>
 
-        <button class="toolbar-icon-button format-action image-toolbar-button" onclick="openImagePicker()" aria-label="插入图片" title="插入图片（Ctrl + Alt + I）">
+        <button
+          class="toolbar-icon-button format-action image-toolbar-button"
+          onclick="openImagePicker()"
+          aria-label="插入图片"
+          title="插入图片（Ctrl + Alt + I）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="4" width="18" height="16" rx="2"></rect>
             <circle cx="8.2" cy="9" r="1.5"></circle>
@@ -2042,28 +2246,58 @@
           </svg>
         </button>
 
-        <input id="equationNumberingCheckbox" type="checkbox" checked="" hidden="">
-        <input id="defaultNumberedEquationCheckbox" type="checkbox" checked="" hidden="">
+        <input
+          id="equationNumberingCheckbox"
+          type="checkbox"
+          checked
+          hidden
+        >
+        <input
+          id="defaultNumberedEquationCheckbox"
+          type="checkbox"
+          checked
+          hidden
+        >
 
         <span class="toolbar-separator" aria-hidden="true"></span>
 
-        <button class="toolbar-icon-button format-action" onclick="insertCodeFormatting()" aria-label="代码" title="行内代码或代码块（Ctrl + `）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="insertCodeFormatting()"
+          aria-label="代码"
+          title="行内代码或代码块（Ctrl + `）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="insertLinkFormatting()" aria-label="链接" title="插入链接（Ctrl + K）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="insertLinkFormatting()"
+          aria-label="链接"
+          title="插入链接（Ctrl + K）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"></path>
             <path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="toggleLinePrefix('quote')" aria-label="引用" title="引用（Ctrl + Shift + 9）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="toggleLinePrefix('quote')"
+          aria-label="引用"
+          title="引用（Ctrl + Shift + 9）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M7 8H4v5h4v3H4M17 8h-3v5h4v3h-4"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="toggleLinePrefix('unordered')" aria-label="无序列表" title="无序列表（Ctrl + Shift + 8）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="toggleLinePrefix('unordered')"
+          aria-label="无序列表"
+          title="无序列表（Ctrl + Shift + 8）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="5" cy="6" r="1"></circle>
             <circle cx="5" cy="12" r="1"></circle>
@@ -2071,12 +2305,22 @@
             <path d="M9 6h11M9 12h11M9 18h11"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="toggleLinePrefix('ordered')" aria-label="有序列表" title="有序列表（Ctrl + Shift + 7）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="toggleLinePrefix('ordered')"
+          aria-label="有序列表"
+          title="有序列表（Ctrl + Shift + 7）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 5h2v4M4 9h3M4 14h2l-2 3h3M10 6h10M10 12h10M10 18h10"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="toggleLinePrefix('task')" aria-label="任务列表" title="任务列表（Ctrl + Alt + T）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="toggleLinePrefix('task')"
+          aria-label="任务列表"
+          title="任务列表（Ctrl + Alt + T）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="4" width="5" height="5" rx="1"></rect>
             <path d="m4.5 6.5 1 1 2-2M11 6.5h10M3 15h5v5H3zM11 17.5h10"></path>
@@ -2085,32 +2329,62 @@
 
         <span class="toolbar-separator" aria-hidden="true"></span>
 
-        <button class="toolbar-icon-button format-action" onclick="changeIndent(-1)" aria-label="减少缩进" title="减少缩进（Shift + Tab）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="changeIndent(-1)"
+          aria-label="减少缩进"
+          title="减少缩进（Shift + Tab）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 6h16M4 18h16M10 10h10M10 14h10M7 10l-3 2 3 2z"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="changeIndent(1)" aria-label="增加缩进" title="增加缩进（Tab）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="changeIndent(1)"
+          aria-label="增加缩进"
+          title="增加缩进（Tab）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 6h16M4 18h16M10 10h10M10 14h10M4 10l3 2-3 2z"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="applyTextAlignment('left')" aria-label="左对齐" title="左对齐（Ctrl + Shift + L）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="applyTextAlignment('left')"
+          aria-label="左对齐"
+          title="左对齐（Ctrl + Shift + L）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 6h16M4 10h11M4 14h16M4 18h9"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="applyTextAlignment('center')" aria-label="居中" title="居中（Ctrl + Shift + E）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="applyTextAlignment('center')"
+          aria-label="居中"
+          title="居中（Ctrl + Shift + E）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 6h16M7 10h10M4 14h16M8 18h8"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="applyTextAlignment('right')" aria-label="右对齐" title="右对齐（Ctrl + Shift + R）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="applyTextAlignment('right')"
+          aria-label="右对齐"
+          title="右对齐（Ctrl + Shift + R）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 6h16M9 10h11M4 14h16M11 18h9"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="applyTextAlignment('justify')" aria-label="两端对齐" title="两端对齐（Ctrl + Shift + J）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="applyTextAlignment('justify')"
+          aria-label="两端对齐"
+          title="两端对齐（Ctrl + Shift + J）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
           </svg>
@@ -2118,18 +2392,33 @@
 
         <span class="toolbar-separator" aria-hidden="true"></span>
 
-        <button class="toolbar-icon-button format-action" onclick="insertHorizontalRule()" aria-label="分隔线" title="插入分隔线（Ctrl + Alt + -）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="insertHorizontalRule()"
+          aria-label="分隔线"
+          title="插入分隔线（Ctrl + Alt + -）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 12h18"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="insertTableTemplate()" aria-label="表格" title="插入表格（Ctrl + Alt + Shift + T）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="insertTableTemplate()"
+          aria-label="表格"
+          title="插入表格（Ctrl + Alt + Shift + T）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="4" width="18" height="16" rx="1"></rect>
             <path d="M3 9h18M3 14h18M9 4v16M15 4v16"></path>
           </svg>
         </button>
-        <button class="toolbar-icon-button format-action" onclick="clearSelectedFormatting()" aria-label="清除格式" title="清除所选文字格式（Ctrl + \）">
+        <button
+          class="toolbar-icon-button format-action"
+          onclick="clearSelectedFormatting()"
+          aria-label="清除格式"
+          title="清除所选文字格式（Ctrl + \）"
+        >
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="m4 19 7-7M10 5h9M14 5l-5 13M5 19h6"></path>
             <path d="m15 15 5 5M20 15l-5 5"></path>
@@ -2147,7 +2436,12 @@
         <div class="right-edit-dialog-title">编辑公式</div>
         <label class="right-edit-dialog-field">
           <span>LaTeX 公式内容</span>
-          <textarea id="formulaEditLatex" rows="7" spellcheck="false" placeholder="例如：E=mc^2"></textarea>
+          <textarea
+            id="formulaEditLatex"
+            rows="7"
+            spellcheck="false"
+            placeholder="例如：E=mc^2"
+          ></textarea>
         </label>
         <label class="right-edit-dialog-field">
           <span>编号方式</span>
@@ -2157,9 +2451,17 @@
             <option value="custom">自定义编号</option>
           </select>
         </label>
-        <label class="right-edit-dialog-field" id="formulaCustomLabelField">
+        <label
+          class="right-edit-dialog-field"
+          id="formulaCustomLabelField"
+        >
           <span>自定义编号或标签</span>
-          <input id="formulaEditLabel" type="text" maxlength="48" placeholder="例如：3.5、A-2、附录1">
+          <input
+            id="formulaEditLabel"
+            type="text"
+            maxlength="48"
+            placeholder="例如：3.5、A-2、附录1"
+          >
         </label>
         <div class="right-edit-dialog-note">
           自定义编号不需要输入括号，也不需要输入任何标记代码。
@@ -2168,7 +2470,11 @@
           <button type="button" onclick="closeRightEditDialog('formula')">
             取消
           </button>
-          <button class="primary" type="button" onclick="saveFormulaFromRightEditor()">
+          <button
+            class="primary"
+            type="button"
+            onclick="saveFormulaFromRightEditor()"
+          >
             保存公式
           </button>
         </div>
@@ -2193,7 +2499,14 @@
           </label>
           <label class="right-edit-dialog-field">
             <span>旋转角度</span>
-            <input id="imageEditRotate" type="number" min="0" max="360" step="1" placeholder="0">
+            <input
+              id="imageEditRotate"
+              type="number"
+              min="0"
+              max="360"
+              step="1"
+              placeholder="0"
+            >
           </label>
         </div>
         <div class="right-edit-dialog-note">
@@ -2203,7 +2516,11 @@
           <button type="button" onclick="closeRightEditDialog('image')">
             取消
           </button>
-          <button class="primary" type="button" onclick="saveImageFromRightEditor()">
+          <button
+            class="primary"
+            type="button"
+            onclick="saveImageFromRightEditor()"
+          >
             保存图片
           </button>
         </div>
@@ -2215,7 +2532,11 @@
         <div class="right-edit-dialog-title">编辑这一段源码</div>
         <label class="right-edit-dialog-field">
           <span>Markdown 源码</span>
-          <textarea id="sourceBlockEditText" rows="10" spellcheck="false"></textarea>
+          <textarea
+            id="sourceBlockEditText"
+            rows="10"
+            spellcheck="false"
+          ></textarea>
         </label>
         <div class="right-edit-dialog-note">
           含有行内公式、混合图片或复杂 HTML 的段落采用源码弹窗，
@@ -2225,7 +2546,11 @@
           <button type="button" onclick="closeRightEditDialog('source')">
             取消
           </button>
-          <button class="primary" type="button" onclick="saveSourceBlockFromRightEditor()">
+          <button
+            class="primary"
+            type="button"
+            onclick="saveSourceBlockFromRightEditor()"
+          >
             保存这一段
           </button>
         </div>
@@ -2248,7 +2573,7 @@
         <div class="metadata-bar" id="metadataBar" aria-label="作者与时间设置">
           
           <button class="metadata-compact-summary" id="metadataCompactSummary" type="button" title="展开作者与时间（Ctrl + Alt + M）">
-            <span class="metadata-compact-text" id="metadataCompactText">未填写作者 · 2026/08/04 14:24</span>
+            <span class="metadata-compact-text" id="metadataCompactText">未填写作者 · 2026/08/04 03:29</span>
             <span class="metadata-compact-arrow" aria-hidden="true">▼</span>
           </button>
           <div class="metadata-field">
@@ -2257,7 +2582,7 @@
           </div>
           <div class="metadata-field">
             <label for="dateInput">时间</label>
-            <input id="dateInput" type="text" placeholder="自动使用渲染时间" value="2026/08/04 14:24">
+            <input id="dateInput" type="text" placeholder="自动使用渲染时间" value="2026/08/04 03:29">
           </div>
           <label class="auto-date-control" title="开启时，每次渲染都会更新为当前时间">
             <input id="autoDateCheckbox" type="checkbox" checked="">
@@ -2267,7 +2592,7 @@
           </div>
         <textarea id="editor" spellcheck="false" wrap="off"># 可编辑的 Markdown 文档
 
-左侧输入源码，右侧实时渲染。
+这是一个类似 **R Markdown** 或普通 **Markdown** 的编辑页面。左侧输入源码，右侧实时渲染。
 
 ## 二级标题
 
@@ -2315,6 +2640,8 @@
 
 ## 行间公式
 
+公式区域会在 Markdown 解析之前受到保护。可以直接使用标准 LaTeX 写法，例如 `\left\{`、`\right\}`、`\text{...}`、`\_`，不再需要改写为其他命令。
+
 较长的公式可以单独写在两对美元符号之间。点击编辑工具栏中的 ∑ 图标会插入普通公式；点击它旁边的小箭头，可以选择无编号公式或自定义编号公式。点击 № 图标，可以选择“不显示”、“以章节编号 x.x”或“以顺序编号”。按章节编号时：如果文档中存在第二个及后续一级标题，就按这些正文一级标题分章；如果只有文档标题这一个一级标题，则继续按二级标题分章，例如 1.1、1.2、2.1：
 
 $$
@@ -2324,7 +2651,7 @@ $$
 这个公式明确设为不编号：
 
 $$
-\int_{-\infty}^{+\infty} e^{-x^2}dx=\sqrt{\pi}
+\int_{-\infty}^{+\infty} e^{-x^2}\,dx=\sqrt{\pi}
 $$ &lt;!-- eq:no-number --&gt;
 
 选择“自定义编号公式”后，可以直接填写 `3.5`、`A-2` 或 `附录1`，不需要记忆或手动输入编号代码。
@@ -2661,6 +2988,326 @@ plot(x, y, type = "l")
       breaks: true,
       headerIds: false,
       mangle: false
+    });
+
+    /*
+     * MathJax–Markdown 转义兼容层：
+     * 数学区域先由专用 tokenizer 接管，再交给 MathJax。
+     * Markdown 不再处理公式内部的 \{、\}、\_、\* 等。
+     */
+    function escapeProtectedMathHTML(value) {
+      return String(value || "").replace(
+        /[&<>]/g,
+        character => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;"
+        })[character]
+      );
+    }
+
+    function findUnescapedMathDelimiter(
+      source,
+      delimiter,
+      startIndex = 0
+    ) {
+      let searchIndex = Math.max(0, startIndex);
+
+      while (searchIndex < source.length) {
+        const foundIndex = source.indexOf(
+          delimiter,
+          searchIndex
+        );
+
+        if (foundIndex < 0) return -1;
+
+        let slashCount = 0;
+
+        for (
+          let cursor = foundIndex - 1;
+          cursor >= 0 && source[cursor] === "\\";
+          cursor -= 1
+        ) {
+          slashCount += 1;
+        }
+
+        if (slashCount % 2 === 0) {
+          return foundIndex;
+        }
+
+        searchIndex =
+          foundIndex + delimiter.length;
+      }
+
+      return -1;
+    }
+
+    function readMathBlockTrailingText(source) {
+      const match = String(source || "").match(
+        /^[ \t]*(?:<!--[\s\S]*?-->[ \t]*)?(?:\n|$)/
+      );
+
+      return match ? match[0] : null;
+    }
+
+    function tokenizeDollarDisplayMath(source) {
+      const opening = source.match(
+        /^ {0,3}\$\$(?!\$)/
+      );
+
+      if (!opening) return null;
+
+      const bodyStart = opening[0].length;
+      const closingIndex =
+        findUnescapedMathDelimiter(
+          source,
+          "$$",
+          bodyStart
+        );
+
+      if (closingIndex < 0) return null;
+
+      const closingEnd = closingIndex + 2;
+      const trailing = readMathBlockTrailingText(
+        source.slice(closingEnd)
+      );
+
+      if (trailing === null) return null;
+
+      return {
+        raw: source.slice(
+          0,
+          closingEnd + trailing.length
+        ),
+        text: source.slice(
+          bodyStart,
+          closingIndex
+        )
+      };
+    }
+
+    function tokenizeBracketDisplayMath(source) {
+      const opening = source.match(
+        /^ {0,3}\\\[/
+      );
+
+      if (!opening) return null;
+
+      const bodyStart = opening[0].length;
+      const closingIndex =
+        findUnescapedMathDelimiter(
+          source,
+          "\\]",
+          bodyStart
+        );
+
+      if (closingIndex < 0) return null;
+
+      const closingEnd = closingIndex + 2;
+      const trailing = readMathBlockTrailingText(
+        source.slice(closingEnd)
+      );
+
+      if (trailing === null) return null;
+
+      return {
+        raw: source.slice(
+          0,
+          closingEnd + trailing.length
+        ),
+        text: source.slice(
+          bodyStart,
+          closingIndex
+        )
+      };
+    }
+
+    function tokenizeDollarInlineMath(source) {
+      if (
+        !source.startsWith("$") ||
+        source.startsWith("$$") ||
+        /^\$\s/.test(source)
+      ) {
+        return null;
+      }
+
+      const closingIndex =
+        findUnescapedMathDelimiter(
+          source,
+          "$",
+          1
+        );
+
+      if (closingIndex <= 1) return null;
+
+      const text = source.slice(
+        1,
+        closingIndex
+      );
+
+      if (
+        text.includes("\n") ||
+        /\s$/.test(text)
+      ) {
+        return null;
+      }
+
+      return {
+        raw: source.slice(
+          0,
+          closingIndex + 1
+        ),
+        text
+      };
+    }
+
+    function tokenizeParenthesisInlineMath(source) {
+      if (!source.startsWith("\\(")) {
+        return null;
+      }
+
+      const closingIndex =
+        findUnescapedMathDelimiter(
+          source,
+          "\\)",
+          2
+        );
+
+      if (closingIndex < 0) return null;
+
+      const text = source.slice(
+        2,
+        closingIndex
+      );
+
+      if (text.includes("\n")) return null;
+
+      return {
+        raw: source.slice(
+          0,
+          closingIndex + 2
+        ),
+        text
+      };
+    }
+
+    marked.use({
+      extensions: [
+        {
+          name: "protectedDollarDisplayMath",
+          level: "block",
+          tokenizer(source) {
+            const token =
+              tokenizeDollarDisplayMath(source);
+
+            if (!token) return undefined;
+
+            return {
+              type:
+                "protectedDollarDisplayMath",
+              raw: token.raw,
+              text: token.text
+            };
+          },
+          renderer(token) {
+            return (
+              '<div class="protected-math-block">' +
+              "\\[" +
+              escapeProtectedMathHTML(token.text) +
+              "\\]" +
+              "</div>\n"
+            );
+          }
+        },
+        {
+          name: "protectedBracketDisplayMath",
+          level: "block",
+          tokenizer(source) {
+            const token =
+              tokenizeBracketDisplayMath(source);
+
+            if (!token) return undefined;
+
+            return {
+              type:
+                "protectedBracketDisplayMath",
+              raw: token.raw,
+              text: token.text
+            };
+          },
+          renderer(token) {
+            return (
+              '<div class="protected-math-block">' +
+              "\\[" +
+              escapeProtectedMathHTML(token.text) +
+              "\\]" +
+              "</div>\n"
+            );
+          }
+        },
+        {
+          name: "protectedParenthesisInlineMath",
+          level: "inline",
+          start(source) {
+            const index = source.indexOf("\\(");
+
+            return index >= 0
+              ? index
+              : undefined;
+          },
+          tokenizer(source) {
+            const token =
+              tokenizeParenthesisInlineMath(source);
+
+            if (!token) return undefined;
+
+            return {
+              type:
+                "protectedParenthesisInlineMath",
+              raw: token.raw,
+              text: token.text
+            };
+          },
+          renderer(token) {
+            return (
+              "\\(" +
+              escapeProtectedMathHTML(token.text) +
+              "\\)"
+            );
+          }
+        },
+        {
+          name: "protectedDollarInlineMath",
+          level: "inline",
+          start(source) {
+            const index = source.indexOf("$");
+
+            return index >= 0
+              ? index
+              : undefined;
+          },
+          tokenizer(source) {
+            const token =
+              tokenizeDollarInlineMath(source);
+
+            if (!token) return undefined;
+
+            return {
+              type:
+                "protectedDollarInlineMath",
+              raw: token.raw,
+              text: token.text
+            };
+          },
+          renderer(token) {
+            return (
+              "\\(" +
+              escapeProtectedMathHTML(token.text) +
+              "\\)"
+            );
+          }
+        }
+      ]
     });
 
     function setStatus(text) {
